@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Review timing</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./style/index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
 <script src="scripts/index.js"></script>
 </head>
@@ -18,15 +19,38 @@
   </main>
 
   <!-- component1 -->
-  <!-- <ul class="filter-items", ng-controller="TabController"> -->
-    <!-- <li class="filter-item" > -->
-      <!-- <a href="">{{tab}}</a> -->
-      <!-- tabは追加、削除可能 -->
-    <!-- </li> -->
-  <!-- </ul> -->
+  <ul class="nav nav-tabs">
+  <!-- ng-controller="TabController" -->
+
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="caret"></span></a>
+      <!-- 設定 -->
+
+      <ul class="dropdown-menu" role="menu">
+        <li role="presentation"><a href="#">アカウント設定</a></li>
+        <li role="presentation"><a href="#">ログ</a></li>
+      </ul>
+    </li>
+
+    <li role="presentation" class="active" >
+      <a href="">基礎情報</a>
+    </li>
+
+    <li role="presentation">
+      <a href="">ネスペ</a>
+    </li>
+
+    <li role="presentation">
+      <a href="">+</a>
+    </li>
+
+  </ul>
+  <!-- tabは追加、削除可能 -->
+
+
+  <!-- component2 -->
   <div class="table-responsive", ng-controller="ProblemController">
 
-    <!-- component2 -->
     <table class="table table-striped">
       <thead>
         <tr>
